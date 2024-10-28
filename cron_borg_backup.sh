@@ -41,8 +41,8 @@ info "Send magic pattern to wake machine"
 etherwake -i eno1 $BACKUP_MAC
 
 info "Wait until ssh works"
-#until borg info backup:$REPO_NAME; do echo "..waiting..."; sleep 15 ; done
-sleep 180
+until borg info backup:$REPO_NAME; do echo "..waiting..."; sleep 15 ; done
+# sleep 180
 
 info "Starting backup"
 
