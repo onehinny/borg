@@ -106,10 +106,10 @@ if [ ${global_exit} -eq 0 ]; then
     ntfy_success "Backup successfull" "Backup, Prune, and Compact finished successfully" 
 elif [ ${global_exit} -eq 1 ]; then
     info "Backup, Prune, and/or Compact finished with warnings"
-    ntfy_critical "Backup successfull" "Backup, Prune, and/or Compact finished with warnings"
+    ntfy_critical "Backup not successfull" "Backup, Prune, and/or Compact finished with warnings"
 else
     info "Backup, Prune, and/or Compact finished with errors"
-    ntfy_critical "Backup successfull" "Backup, Prune, and/or Compact finished with errors"
+    ntfy_critical "Backup not successfull" "Backup, Prune, and/or Compact finished with errors"
 fi
 
 exit ${global_exit}
